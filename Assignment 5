@@ -1,0 +1,688 @@
+# ==========================================
+# Level 1 — Loop Thinking & range()
+# ==========================================
+
+# Q1. Predict the Loop Values
+# Code:
+# for i in range(2, 15, 3):
+#     print(i)
+# Expected Output: 2, 5, 8, 11, 14
+
+# Q2. Reverse range() Prediction
+# Code:
+# for i in range(15, 2, -3):
+#     print(i)
+# Expected Output: 15, 12, 9, 6, 3
+
+# Q3. How Many Iterations?
+# Code:
+# for i in range(4, 31, 5):
+#     print(i)
+# Expected Output: 6 iterations (4, 9, 14, 19, 24, 29)
+
+# Q4. Correct the Boundary
+for i in range(3, 19, 3):
+    print(i)
+
+# Q5. Number and Distance from 20
+for i in range(5, 11):
+    print(i, 20 - i)
+
+# Q6. Number, Square and Cube
+for i in range(1, 7):
+    print(i, i**2, i**3)
+
+
+# ==========================================
+# Level 2 — Counting & Accumulation
+# ==========================================
+
+# Q7. Sum of Numbers in a Range
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+total_sum = 0
+for i in range(start, end + 1):
+    total_sum += i
+print("Output:", total_sum)
+
+# Q8. Count Multiples of 3
+N = int(input("Enter N: "))
+count = 0
+for i in range(1, N + 1):
+    if i % 3 == 0:
+        count += 1
+print("Output:", count)
+
+# Q9. Sum of Multiples of 4
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N + 1):
+    if i % 4 == 0:
+        total += i
+print("Output:", total)
+
+# Q10. Count Numbers with Two Conditions
+N = int(input("Enter N: "))
+count = 0
+for i in range(1, N + 1):
+    if i % 3 == 0 and i % 5 == 0:
+        count += 1
+print("Output:", count)
+
+# Q11. Sum Numbers Except Multiples of 3
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N + 1):
+    if i % 3 != 0:
+        total += i
+print("Output:", total)
+
+# Q12. Count Even and Odd Together
+N = int(input("Enter N: "))
+even_count = 0
+odd_count = 0
+for i in range(1, N + 1):
+    if i % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+print(f"Output: Even = {even_count}, Odd = {odd_count}")
+
+# Q13. Running Sum
+N = int(input("Enter N: "))
+running_sum = 0
+for i in range(1, N + 1):
+    running_sum += i
+    print(running_sum)
+
+# Q14. Running Product
+N = int(input("Enter N: "))
+running_prod = 1
+for i in range(1, N + 1):
+    running_prod *= i
+    print(running_prod)
+
+
+# ==========================================
+# Level 3 — Factorial & Product Logic
+# ==========================================
+
+# Q15. Factorial of a Number
+N = int(input("Enter N: "))
+fact = 1
+for i in range(1, N + 1):
+    fact *= i
+print("Output:", fact)
+
+# Q16. Factorial from 1 to N
+N = int(input("Enter N: "))
+fact = 1
+for i in range(1, N + 1):
+    fact *= i
+    print(f"{i}! = {fact}")
+
+# Q17. Product of Even Numbers
+N = int(input("Enter N: "))
+prod = 1
+for i in range(2, N + 1, 2):
+    prod *= i
+print("Output:", prod)
+
+# Q18. Product of Odd Numbers
+N = int(input("Enter N: "))
+prod = 1
+for i in range(1, N + 1, 2):
+    prod *= i
+print("Output:", prod)
+
+# Q19. Double Factorial — Even Numbers
+N = int(input("Enter N: "))
+dfact = 1
+for i in range(N, 1, -2):
+    dfact *= i
+print("Output:", dfact)
+
+# Q20. Sum of Squares
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N + 1):
+    total += i**2
+print("Output:", total)
+
+# Q21. Sum of Cubes
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N + 1):
+    total += i**3
+print("Output:", total)
+
+# Q22. Factorial-Based Sum
+N = int(input("Enter N: "))
+total_sum = 0
+fact = 1
+for i in range(1, N + 1):
+    fact *= i
+    total_sum += fact
+print("Output:", total_sum)
+
+
+# ==========================================
+# Level 4 — Number & Digit Logic
+# ==========================================
+
+# Q23. Count Digits Using a Loop
+num = int(input("Enter a positive integer: "))
+temp = num
+count = 0
+if temp == 0:
+    count = 1
+else:
+    for i in range(temp):
+        if temp > 0:
+            count += 1
+            temp //= 10
+print("Output:", count)
+
+# Q24. Sum of Digits
+num = int(input("Enter an integer: "))
+temp = num
+digit_sum = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        digit_sum += digit
+        temp //= 10
+print("Output:", digit_sum)
+
+# Q25. Product of Digits
+num = int(input("Enter an integer: "))
+temp = num
+digit_prod = 1
+if temp == 0:
+    digit_prod = 0
+else:
+    for i in range(num):
+        if temp > 0:
+            digit = temp % 10
+            digit_prod *= digit
+            temp //= 10
+print("Output:", digit_prod)
+
+# Q26. Count Even Digits
+num = int(input("Enter an integer: "))
+temp = num
+even_digit_count = 0
+if temp == 0 and temp % 2 == 0:
+    even_digit_count = 1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit % 2 == 0:
+            even_digit_count += 1
+        temp //= 10
+print("Output:", even_digit_count)
+
+# Q27. Sum of Even Digits
+num = int(input("Enter an integer: "))
+temp = num
+even_sum = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit % 2 == 0:
+            even_sum += digit
+        temp //= 10
+print("Output:", even_sum)
+
+# Q28. Largest Digit Without max()
+num = int(input("Enter an integer: "))
+temp = num
+largest = -1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit > largest:
+            largest = digit
+        temp //= 10
+print("Output:", largest)
+
+# Q29. Smallest Digit Without min()
+num = int(input("Enter an integer: "))
+temp = num
+smallest = 10
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit < smallest:
+            smallest = digit
+        temp //= 10
+if num == 0:
+    smallest = 0
+print("Output:", smallest)
+
+# Q30. Reverse a Number
+num = int(input("Enter an integer: "))
+temp = num
+rev = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        rev = rev * 10 + digit
+        temp //= 10
+print("Output:", rev)
+
+# Q31. Palindrome Number
+num = int(input("Enter an integer: "))
+temp = num
+rev = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        rev = rev * 10 + digit
+        temp //= 10
+if rev == num:
+    print("Output: Palindrome")
+else:
+    print("Output: Not Palindrome")
+
+# Q32. Count a Specific Digit
+num = int(input("Enter an integer: "))
+target = int(input("Enter target digit: "))
+temp = num
+count = 0
+if num == 0 and target == 0:
+    count = 1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit == target:
+            count += 1
+        temp //= 10
+print("Output:", count)
+
+# Q33. First Digit Using Repeated Division
+num = int(input("Enter a positive integer: "))
+temp = num
+first_digit = 0
+for i in range(num):
+    if temp > 0:
+        first_digit = temp % 10
+        temp //= 10
+print("Output:", first_digit)
+
+# Q34. Difference Between Largest and Smallest Digit
+num = int(input("Enter an integer: "))
+temp = num
+largest = -1
+smallest = 10
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit > largest:
+            largest = digit
+        if digit < smallest:
+            smallest = digit
+        temp //= 10
+print("Output:", largest - smallest)
+
+# Q35. Digit Position Value
+num = int(input("Enter a positive integer: "))
+temp = num
+pos = 1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        print(digit, pos)
+        pos += 1
+        temp //= 10
+
+# Q36. Armstrong Number — 3 Digit
+num = int(input("Enter a 3-digit number: "))
+temp = num
+arm_sum = 0
+for i in range(3):
+    if temp > 0:
+        digit = temp % 10
+        arm_sum += digit ** 3
+        temp //= 10
+if arm_sum == num:
+    print("Output: Armstrong Number")
+else:
+    print("Output: Not Armstrong Number")
+
+
+# ==========================================
+# Level 5 — String & Character Logic
+# ==========================================
+
+# Q37. Print Characters with Index
+s = input("Enter a string: ")
+for i in range(len(s)):
+    print(i, s[i])
+
+# Q38. Count Characters Without len()
+s = input("Enter a string: ")
+count = 0
+for char in s:
+    count += 1
+print("Output:", count)
+
+# Q39. Count Vowels and Consonants
+s = input("Enter a string: ")
+vowels = 0
+consonants = 0
+for char in s:
+    if char != " ":
+        if char in "aeiouAEIOU":
+            vowels += 1
+        else:
+            consonants += 1
+print(f"Output: Vowels = {vowels}, Consonants = {consonants}")
+
+# Q40. Character Frequency
+s = input("Enter a string: ")
+target = input("Enter target character: ")
+count = 0
+for char in s:
+    if char == target:
+        count += 1
+print("Output:", count)
+
+# Q41. First Occurrence Position
+s = input("Enter a string: ")
+target = input("Enter target character: ")
+pos = -1
+idx = 0
+for char in s:
+    if char == target and pos == -1:
+        pos = idx
+    idx += 1
+if pos != -1:
+    print("Output:", pos)
+else:
+    print("Output: Not Found")
+
+# Q42. Count Uppercase and Lowercase
+s = input("Enter a string: ")
+upper_count = 0
+lower_count = 0
+for char in s:
+    if "A" <= char <= "Z":
+        upper_count += 1
+    elif "a" <= char <= "z":
+        lower_count += 1
+print(f"Output: Uppercase = {upper_count}, Lowercase = {lower_count}")
+
+# Q43. Character Code Analyzer
+s = input("Enter a string: ")
+for char in s:
+    print(char, ord(char))
+
+# Q44. String Without Vowels
+s = input("Enter a string: ")
+res = ""
+for char in s:
+    if char not in "aeiouAEIOU":
+        res += char
+print("Output:", res)
+
+
+# ==========================================
+# Level 6 — Midpoint, Half & String Logic
+# ==========================================
+
+# Q45. Find the Middle Character
+s = input("Enter a string of odd length: ")
+length = 0
+for char in s:
+    length += 1
+mid_idx = length // 2
+print("Output:", s[mid_idx])
+
+# Q46. First Half and Second Half
+s = input("Enter a string of even length: ")
+length = 0
+for char in s:
+    length += 1
+half = length // 2
+first = ""
+second = ""
+idx = 0
+for char in s:
+    if idx < half:
+        first += char
+    else:
+        second += char
+    idx += 1
+print(f"First Half: {first}\nSecond Half: {second}")
+
+# Q47. Split a String by Length — Odd vs Even
+s = input("Enter a string: ")
+length = 0
+for char in s:
+    length += 1
+half = length // 2
+first = ""
+second = ""
+middle = ""
+idx = 0
+for char in s:
+    if length % 2 != 0:
+        if idx < half:
+            first += char
+        elif idx == half:
+            middle += char
+        else:
+            second += char
+    else:
+        if idx < half:
+            first += char
+        else:
+            second += char
+    idx += 1
+
+if length % 2 != 0:
+    print(f"First Half: {first}\nMiddle: {middle}\nSecond Half: {second}")
+else:
+    print(f"First Half: {first}\nSecond Half: {second}")
+
+# Q48. Compare Two Halves
+s = input("Enter a string of even length: ")
+length = 0
+for char in s:
+    length += 1
+half = length // 2
+first = ""
+second = ""
+idx = 0
+for char in s:
+    if idx < half:
+        first += char
+    else:
+        second += char
+    idx += 1
+if first == second:
+    print("Output: Equal Halves")
+else:
+    print("Output: Different Halves")
+
+# Q49. Mirror the String
+s = input("Enter a string: ")
+length = 0
+for char in s:
+    length += 1
+is_symmetric = True
+for i in range(length // 2):
+    if s[i] != s[length - 1 - i]:
+        is_symmetric = False
+if is_symmetric:
+    print("Output: Symmetric")
+else:
+    print("Output: Not Symmetric")
+
+# Q50. Alternate Character Extraction
+s = input("Enter a string: ")
+res = ""
+idx = 0
+for char in s:
+    if idx % 2 == 0:
+        res += char
+    idx += 1
+print("Output:", res)
+
+# Q51. Count Characters at Even and Odd Indexes
+s = input("Enter a string: ")
+even_idx = 0
+odd_idx = 0
+idx = 0
+for char in s:
+    if idx % 2 == 0:
+        even_idx += 1
+    else:
+        odd_idx += 1
+    idx += 1
+print(f"Output: Even Index = {even_idx}, Odd Index = {odd_idx}")
+
+# Q52. Swap Adjacent Characters
+s = input("Enter a string of even length: ")
+length = 0
+for char in s:
+    length += 1
+res = ""
+for i in range(0, length, 2):
+    res += s[i+1] + s[i]
+print("Output:", res)
+
+
+# ==========================================
+# Level 7 — Tricky Single-Loop Problems
+# ==========================================
+
+# Q53. Second Largest Digit
+num = int(input("Enter an integer: "))
+temp = num
+largest = -1
+second_largest = -1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit > largest:
+            second_largest = largest
+            largest = digit
+        elif digit > second_largest and digit != largest:
+            second_largest = digit
+        temp //= 10
+print("Output:", second_largest)
+
+# Q54. Longest Consecutive Equal Character Run
+s = input("Enter a string: ")
+max_run = 0
+current_run = 0
+prev_char = ""
+for char in s:
+    if char == prev_char:
+        current_run += 1
+    else:
+        current_run = 1
+        prev_char = char
+    if current_run > max_run:
+        max_run = current_run
+print("Output:", max_run)
+
+# Q55. Most Frequent Character — Controlled Approach
+s = input("Enter a string: ")
+target = input("Enter target character: ")
+count = 0
+total_chars = 0
+for char in s:
+    total_chars += 1
+    if char == target:
+        count += 1
+freq = (count / total_chars) * 100 if total_chars > 0 else 0
+print(f"Output: Count = {count}, Frequency = {freq:.2f}%")
+
+# Q56. Running Digit Sum Until the End
+num = int(input("Enter a positive integer: "))
+temp = num
+running_sum = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        running_sum += digit
+        print(running_sum)
+        temp //= 10
+
+# Q57. Number with Most Even Digits
+num = int(input("Enter a positive integer: "))
+temp = num
+even_count = 0
+odd_count = 0
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        temp //= 10
+if even_count > odd_count:
+    print("Output: More Even Digits")
+elif odd_count > even_count:
+    print("Output: More Odd Digits")
+else:
+    print("Output: Equal")
+
+# Q58. Alternating Digit Sum
+num = int(input("Enter a positive integer: "))
+temp = num
+alt_sum = 0
+pos = 1
+for i in range(num):
+    if temp > 0:
+        digit = temp % 10
+        if pos % 2 != 0:
+            alt_sum += digit
+        else:
+            alt_sum -= digit
+        pos += 1
+        temp //= 10
+print("Output:", alt_sum)
+
+# Q59. Output Prediction — Accumulator Trap
+# Code / Prediction:
+# 2, 6, 12, 20, 30
+
+# Q60. Output Prediction — Condition Inside Loop
+# Code / Prediction: 5 (counts even numbers from 1 to 10)
+
+# Q61. Debug the Accumulator
+total_sum = 0
+for i in range(1, 6):
+    total_sum += i
+print(total_sum)
+
+
+# ==========================================
+# Level 8 — Real-Life Single-Loop Problems
+# ==========================================
+
+# Q62. Daily Expense Analyzer
+days = int(input("Enter number of days: "))
+total_exp = 0
+highest_exp = -1
+lowest_exp = -1
+for i in range(days):
+    exp = float(input(f"Enter expense for day {i+1}: "))
+    total_exp += exp
+    if i == 0:
+        highest_exp = exp
+        lowest_exp = exp
+    else:
+        if exp > highest_exp:
+            highest_exp = exp
+        if exp < lowest_exp:
+            lowest_exp = exp
+print(f"Total: {int(total_exp)}\nHighest: {int(highest_exp)}\nLowest: {int(lowest_exp)}")
+
+# Q63. Student Marks Analyzer
+subjects = int(input("Enter number of subjects:
