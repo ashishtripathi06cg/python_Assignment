@@ -1,0 +1,969 @@
+# Level 1 — Basic Patterns
+
+# Q1. Solid Square
+print("--- Q1 ---")
+N = 5
+for i in range(N):
+    print("*" * N)
+
+# Q2. Solid Rectangle
+print("\n--- Q2 ---")
+rows, cols = 3, 6
+for i in range(rows):
+    print("*" * cols)
+
+# Q3. Increasing Star Triangle
+print("\n--- Q3 ---")
+N = 5
+for i in range(1, N + 1):
+    print("*" * i)
+
+# Q4. Increasing Number Triangle
+print("\n--- Q4 ---")
+N = 5
+for i in range(1, N + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+# Q5. Repeated Number Triangle
+print("\n--- Q5 ---")
+N = 5
+for i in range(1, N + 1):
+    print(str(i) * i)
+
+# Q6. Repeated Alphabet Triangle
+print("\n--- Q6 ---")
+N = 5
+for i in range(1, N + 1):
+    print(chr(64 + i) * i)
+
+# Q7. Alphabet Triangle
+print("\n--- Q7 ---")
+N = 5
+for i in range(1, N + 1):
+    for j in range(1, i + 1):
+        print(chr(64 + j), end="")
+    print()
+
+# Q8. Continuous Number Triangle
+print("\n--- Q8 ---")
+N = 5
+num = 1
+for i in range(1, N + 1):
+    for j in range(i):
+        print(num, end=" ")
+        num += 1
+    print()
+
+# Q9. Alternating 0–1 Triangle
+print("\n--- Q9 ---")
+N = 5
+for i in range(1, N + 1):
+    start = 1 if i % 2 != 0 else 0
+    for j in range(i):
+        print(start, end=" ")
+        start = 1 - start
+    print()
+
+# Q10. Decreasing Star Triangle
+print("\n--- Q10 ---")
+N = 5
+for i in range(N, 0, -1):
+    print("*" * i)
+
+# Q11. Decreasing Number Triangle
+print("\n--- Q11 ---")
+N = 5
+for i in range(N, 0, -1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+# Q12. Decreasing Alphabet Triangle
+print("\n--- Q12 ---")
+N = 5
+for i in range(N, 0, -1):
+    for j in range(1, i + 1):
+        print(chr(64 + j), end="")
+    print()
+
+
+# ==========================================
+# Level 2 — Spaces and Alignment
+# ==========================================
+
+# Q13. Right-Aligned Half Pyramid
+print("\n--- Q13 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i) + "*" * i)
+
+# Q14. Inverted Right-Aligned Half Pyramid
+print("\n--- Q14 ---")
+N = 5
+for i in range(N, 0, -1):
+    print(" " * (N - i) + "*" * i)
+
+# Q15. Star Pyramid
+print("\n--- Q15 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i) + "*" * (2 * i - 1))
+
+# Q16. Inverted Star Pyramid
+print("\n--- Q16 ---")
+N = 5
+for i in range(N, 0, -1):
+    print(" " * (N - i) + "*" * (2 * i - 1))
+
+# Q17. Solid Diamond
+print("\n--- Q17 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i) + "*" * (2 * i - 1))
+for i in range(N - 1, 0, -1):
+    print(" " * (N - i) + "*" * (2 * i - 1))
+
+# Q18. Rhombus
+print("\n--- Q18 ---")
+N = 5
+for i in range(N):
+    print(" " * (N - i - 1) + "*" * N)
+
+# Q19. Mirrored Number Pattern
+print("\n--- Q19 ---")
+N = 5
+for i in range(1, N + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print(" " * (2 * (N - i)), end="")
+    for j in range(i, 0, -1):
+        print(j, end="")
+    print()
+
+# Q20. Centered Number Pyramid
+print("\n--- Q20 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+
+# Q21. Palindromic Number Pyramid
+print("\n--- Q21 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for j in range(i - 1, 0, -1):
+        print(j, end="")
+    print()
+
+# Q22. Alphabet Palindrome Pyramid
+print("\n--- Q22 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, i + 1):
+        print(chr(64 + j), end="")
+    for j in range(i - 1, 0, -1):
+        print(chr(64 + j), end="")
+    print()
+
+# Q23. Reverse-Starting Alphabet Triangle
+print("\n--- Q23 ---")
+N = 5
+for i in range(1, N + 1):
+    start = N - i
+    for j in range(i):
+        print(chr(65 + start + j), end=" ")
+    print()
+
+
+# ==========================================
+# Level 3 — Mixed Logic and Repeated Sequences
+# ==========================================
+
+# Q24. Increasing and Decreasing Star Triangle
+print("\n--- Q24 ---")
+N = 5
+for i in range(1, N + 1):
+    print("*" * i)
+for i in range(N - 1, 0, -1):
+    print("*" * i)
+
+# Q25. Number Hourglass
+print("\n--- Q25 ---")
+N = 5
+for i in range(N, 0, -1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+for i in range(2, N + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+# Q26. Alphabet Hourglass
+print("\n--- Q26 ---")
+N = 5
+for i in range(N, 0, -1):
+    for j in range(1, i + 1):
+        print(chr(64 + j), end="")
+    print()
+for i in range(2, N + 1):
+    for j in range(1, i + 1):
+        print(chr(64 + j), end="")
+    print()
+
+# Q27. Alternating Star and Hash Grid
+print("\n--- Q27 ---")
+N = 5
+for i in range(N):
+    for j in range(N):
+        if (i + j) % 2 == 0:
+            print("*", end="")
+        else:
+            print("#", end="")
+    print()
+
+# Q28. Binary Checkerboard
+print("\n--- Q28 ---")
+N = 5
+for i in range(N):
+    for j in range(N):
+        print((i + j + 1) % 2, end="")
+    print()
+
+# Q29. Multiplication Grid
+print("\n--- Q29 ---")
+N = 5
+for i in range(1, N + 1):
+    for j in range(1, N + 1):
+        print(i * j, end=" ")
+    print()
+
+# Q30. Alternating-Direction Rows
+print("\n--- Q30 ---")
+N = 5
+for i in range(1, N + 1):
+    if i % 2 != 0:
+        for j in range(1, i + 1):
+            print(j, end="")
+    else:
+        for j in range(i, 0, -1):
+            print(j, end="")
+    print()
+
+# Q31. Number Diamond
+print("\n--- Q31 ---")
+N = 4
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for j in range(i - 1, 0, -1):
+        print(j, end="")
+    print()
+for i in range(N - 1, 0, -1):
+    print(" " * (N - i), end="")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for j in range(i - 1, 0, -1):
+        print(j, end="")
+    print()
+
+# Q32. Concentric Number Square
+print("\n--- Q32 ---")
+N = 5
+size = 2 * N - 1
+for i in range(size):
+    for j in range(size):
+        val = N - min(i, j, size - 1 - i, size - 1 - j)
+        print(val, end=" ")
+    print()
+
+
+# ==========================================
+# Level 4 — Hollow Patterns and Conditions
+# ==========================================
+
+# Q33. Hollow Square
+print("\n--- Q33 ---")
+N = 5
+for i in range(N):
+    for j in range(N):
+        if i == 0 or i == N - 1 or j == 0 or j == N - 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q34. Hollow Rectangle
+print("\n--- Q34 ---")
+rows, cols = 4, 6
+for i in range(rows):
+    for j in range(cols):
+        if i == 0 or i == rows - 1 or j == 0 or j == cols - 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q35. Hollow Number Square
+print("\n--- Q35 ---")
+N = 5
+for i in range(N):
+    for j in range(N):
+        if i == 0 or i == N - 1 or j == 0 or j == N - 1:
+            print("1", end="")
+        else:
+            print("0", end="")
+    print()
+
+# Q36. Hollow Right-Angled Triangle
+print("\n--- Q36 ---")
+N = 5
+for i in range(1, N + 1):
+    for j in range(1, i + 1):
+        if j == 1 or j == i or i == N:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q37. Hollow Inverted Triangle
+print("\n--- Q37 ---")
+N = 5
+for i in range(N, 0, -1):
+    for j in range(1, i + 1):
+        if j == 1 or j == i or i == N:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q38. Hollow Pyramid
+print("\n--- Q38 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, 2 * i):
+        if j == 1 or j == 2 * i - 1 or i == N:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q39. Hollow Diamond
+print("\n--- Q39 ---")
+N = 5
+for i in range(1, N + 1):
+    print(" " * (N - i), end="")
+    for j in range(1, 2 * i):
+        if j == 1 or j == 2 * i - 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+for i in range(N - 1, 0, -1):
+    print(" " * (N - i), end="")
+    for j in range(1, 2 * i):
+        if j == 1 or j == 2 * i - 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q40. X Pattern
+print("\n--- Q40 ---")
+N = 5
+for i in range(N):
+    for j in range(N):
+        if j == i or j == N - 1 - i:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q41. Cross Pattern
+print("\n--- Q41 ---")
+N = 5
+mid = N // 2
+for i in range(N):
+    for j in range(N):
+        if i == mid or j == mid:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Q42. Star Cross with Four Arms
+print("\n--- Q42 ---")
+N = 5
+mid = N // 2
+for i in range(N):
+    for j in range(N):
+        if i == mid or j == mid or i == j or j == N - 1 - i:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+
+# ==========================================
+# Part 2 — Statement-Based Logic Practice
+# Level 1 — Basic Number Logic
+# ==========================================
+
+# Q66. Count Digits
+print("\n--- Q66 ---")
+n = 1234
+print(len(str(abs(n))))
+
+# Q67. Sum of Digits
+print("\n--- Q67 ---")
+n = 123
+print(sum(int(d) for d in str(abs(n))))
+
+# Q68. Product of Digits
+print("\n--- Q68 ---")
+n = 123
+prod = 1
+for d in str(abs(n)):
+    prod *= int(d)
+print(prod)
+
+# Q69. Reverse a Number
+print("\n--- Q69 ---")
+n = 1234
+print(int(str(abs(n))[::-1]))
+
+# Q70. Palindrome Number
+print("\n--- Q70 ---")
+n = 121
+s = str(n)
+print(s == s[::-1])
+
+# Q71. Prime Number
+print("\n--- Q71 ---")
+n = 17
+if n < 2:
+    is_prime = False
+else:
+    is_prime = True
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            is_prime = False
+            break
+print(is_prime)
+
+# Q72. Primes from 1 to N
+print("\n--- Q72 ---")
+N = 10
+primes = []
+for n in range(2, N + 1):
+    is_p = True
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            is_p = False
+            break
+    if is_p:
+        primes.append(str(n))
+print(" ".join(primes))
+
+# Q73. First N Fibonacci Numbers
+print("\n--- Q73 ---")
+N = 5
+fib = []
+a, b = 0, 1
+for _ in range(N):
+    fib.append(str(a))
+    a, b = b, a + b
+print(" ".join(fib))
+
+# Q74. GCD of Two Numbers
+print("\n--- Q74 ---")
+a, b = 12, 18
+while b:
+    a, b = b, a % b
+print(a)
+
+# Q75. LCM of Two Numbers
+print("\n--- Q75 ---")
+a, b = 4, 6
+import math
+
+print(abs(a * b) // math.gcd(a, b))
+
+
+# ==========================================
+# Level 2 — Basic String Logic
+# ==========================================
+
+# Q76. Length of a String
+print("\n--- Q76 ---")
+s = "hello"
+print(len(s))
+
+# Q77. Print Each Character
+print("\n--- Q77 ---")
+s = "cat"
+for ch in s:
+    print(ch)
+
+# Q78. Count Vowels
+print("\n--- Q78 ---")
+s = "hello"
+print(sum(1 for ch in s if ch in "aeiouAEIOU"))
+
+# Q79. Count Consonants
+print("\n--- Q79 ---")
+s = "hello"
+print(sum(1 for ch in s if ch.isalpha() and ch not in "aeiouAEIOU"))
+
+# Q80. Convert to Uppercase
+print("\n--- Q80 ---")
+s = "hello"
+print(s.upper())
+
+# Q81. Convert to Lowercase
+print("\n--- Q81 ---")
+s = "HELLO"
+print(s.lower())
+
+# Q82. Reverse a String
+print("\n--- Q82 ---")
+s = "hello"
+print(s[::-1])
+
+# Q83. Palindrome String
+print("\n--- Q83 ---")
+s = "madam"
+print(s == s[::-1])
+
+# Q84. Count a Specific Character
+print("\n--- Q84 ---")
+s = "banana"
+print(s.lower().count("a"))
+
+# Q85. Remove All Spaces
+print("\n--- Q85 ---")
+s = "hello world"
+print(s.replace(" ", ""))
+
+
+# ==========================================
+# Level 3 — More String Practice
+# ==========================================
+
+# Q86. Count Words
+print("\n--- Q86 ---")
+s = "  this   is spaced  "
+print(len(s.split()))
+
+# Q87. Replace All 'a' with 'e'
+print("\n--- Q87 ---")
+s = "banana"
+print(s.replace("a", "e"))
+
+# Q88. Check for a Character
+print("\n--- Q88 ---")
+s, ch = "hello", "e"
+print(ch in s)
+
+# Q89. Compare Two Strings
+print("\n--- Q89 ---")
+s1, s2 = "hello", "hello"
+print(s1 == s2)
+
+# Q90. Count Digits in a String
+print("\n--- Q90 ---")
+s = "abc123"
+print(sum(1 for ch in s if ch.isdigit()))
+
+# Q91. Count Uppercase Letters
+print("\n--- Q91 ---")
+s = "HeLLo"
+print(sum(1 for ch in s if ch.isupper()))
+
+# Q92. Count Lowercase Letters
+print("\n--- Q92 ---")
+s = "HeLLo"
+print(sum(1 for ch in s if ch.islower()))
+
+# Q93. Remove All Vowels
+print("\n--- Q93 ---")
+s = "hello"
+print("".join(ch for ch in s if ch not in "aeiouAEIOU"))
+
+# Q94. Remove All Digits
+print("\n--- Q94 ---")
+s = "abc123"
+print("".join(ch for ch in s if not ch.isdigit()))
+
+# Q95. Toggle Character Case
+print("\n--- Q95 ---")
+s = "HeLLo"
+print(s.swapcase())
+
+
+# ==========================================
+# Part 3 — Nested-Loop Thinking
+# Level 1 — Tables and Repeated Calculations
+# ==========================================
+
+# Q96. Multiplication Tables from 1 to N
+print("\n--- Q96 ---")
+N, K = 3, 4
+for i in range(1, N + 1):
+    for j in range(1, K + 1):
+        print(f"{i} x {j} = {i * j}")
+
+# Q97. Number and Its Divisors
+print("\n--- Q97 ---")
+N = 4
+for i in range(1, N + 1):
+    divs = [str(j) for j in range(1, i + 1) if i % j == 0]
+    print(f"{i}: {' '.join(divs)}")
+
+# Q98. Count Divisors for Every Number
+print("\n--- Q98 ---")
+N = 5
+for i in range(1, N + 1):
+    count = sum(1 for j in range(1, i + 1) if i % j == 0)
+    print(f"{i}: {count}")
+
+# Q99. Perfect Numbers in a Range
+print("\n--- Q99 ---")
+N = 30
+for num in range(1, N + 1):
+    if sum(i for i in range(1, num) if num % i == 0) == num:
+        print(num)
+
+# Q100. Prime Numbers in a Range — Count Each Check
+print("\n--- Q100 ---")
+N = 12
+primes = []
+for n in range(2, N + 1):
+    is_p = True
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            is_p = False
+            break
+    if is_p:
+        primes.append(str(n))
+print(" ".join(primes))
+
+
+# ==========================================
+# Level 2 — Compare Items and Find Pairs
+# ==========================================
+
+# Q101. Pairs of Digits with a Target Sum
+print("\n--- Q101 ---")
+number, target = 12345, 6
+s = str(number)
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        if int(s[i]) + int(s[j]) == target:
+            print(f"{s[i]} {s[j]}")
+
+# Q102. Digit Pairs with a Fixed Difference
+print("\n--- Q102 ---")
+number, D = 14253, 2
+s = str(number)
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        if abs(int(s[i]) - int(s[j])) == D:
+            print(f"{s[i]} {s[j]}")
+
+# Q103. Repeated Digits in a Number
+print("\n--- Q103 ---")
+number = 4243124
+s = str(number)
+seen = ""
+for ch in s:
+    if s.count(ch) > 1 and ch not in seen:
+        print(ch)
+        seen += ch
+
+# Q104. Count Equal Digit Pairs
+print("\n--- Q104 ---")
+number = 12131
+s = str(number)
+count = 0
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        if s[i] == s[j]:
+            count += 1
+print(count)
+
+# Q105. Common Characters in Two Strings
+print("\n--- Q105 ---")
+first, second = "program", "grammar"
+seen = ""
+for ch in first:
+    if ch in second and ch not in seen:
+        print(ch)
+        seen += ch
+
+# Q106. Check Whether Two Strings Share a Character
+print("\n--- Q106 ---")
+first, second = "cat", "dog"
+common = False
+for ch1 in first:
+    for ch2 in second:
+        if ch1 == ch2:
+            common = True
+            break
+print(common)
+
+# Q107. Seating Plan
+print("\n--- Q107 ---")
+rows, seats_per_row = 3, 4
+for r in range(1, rows + 1):
+    seats = " ".join(str(s) for s in range(1, seats_per_row + 1))
+    print(f"Row {r}: {seats}")
+
+# Q108. Student Marks and Class Total
+print("\n--- Q108 ---")
+students, tests = 3, 2
+marks = [10, 20, 15, 15, 20, 10]
+idx, class_total = 0, 0
+for s in range(1, students + 1):
+    student_total = 0
+    for t in range(tests):
+        student_total += marks[idx]
+        idx += 1
+    class_total += student_total
+    print(f"Student {s} total: {student_total}")
+print(f"Class total: {class_total}")
+
+# Q109. Daily Rainfall Summary
+print("\n--- Q109 ---")
+days, stations = 2, 3
+measurements = [2, 0, 5, 1, 4, 3]
+idx = 0
+for d in range(1, days + 1):
+    day_total = 0
+    for s in range(stations):
+        day_total += measurements[idx]
+        idx += 1
+    print(f"Day {d} total: {day_total}")
+
+# Q110. Largest of Several Numbers in Each Group
+print("\n--- Q110 ---")
+groups, per_group = 2, 3
+numbers = [4, 9, 2, 7, 1, 5]
+idx = 0
+for g in range(groups):
+    max_num = numbers[idx]
+    for p in range(per_group):
+        if numbers[idx] > max_num:
+            max_num = numbers[idx]
+        idx += 1
+    print(max_num)
+
+# Q111. Sum of Numbers by Group and Position
+print("\n--- Q111 ---")
+g1 = [1, 2, 3]
+g2 = [4, 5, 6]
+sum1, sum2 = sum(g1), sum(g2)
+pos_sums = [g1[i] + g2[i] for i in range(3)]
+print(f"Group sums: {sum1} {sum2}")
+print(f"Position sums: {' '.join(map(str, pos_sums))}")
+
+# Q112. Number Pair Comparison Table
+print("\n--- Q112 ---")
+N = 3
+for i in range(1, N + 1):
+    row = [str(i + j) for j in range(1, N + 1)]
+    print(" ".join(row))
+
+# Q113. Count Zeroes in a Number Sequence
+print("\n--- Q113 ---")
+numbers = [0, 2, 0, 3, 0, 4]
+print(numbers.count(0))
+
+# Q114. Print Row and Column Coordinates
+print("\n--- Q114 ---")
+R, C = 2, 3
+for r in range(R):
+    row_str = " ".join(f"({r}, {c})" for c in range(C))
+    print(row_str)
+
+# Q115. Find Every Occurrence of a Substring
+print("\n--- Q115 ---")
+text, pattern = "aaaa", "aa"
+indices = []
+for i in range(len(text) - len(pattern) + 1):
+    if text[i : i + len(pattern)] == pattern:
+        indices.append(str(i))
+print(" ".join(indices))
+
+# Q116. Count Matching Character Pairs
+print("\n--- Q116 ---")
+s = "abca"
+count = 0
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        if s[i] == s[j]:
+            count += 1
+print(count)
+
+# Q117. Check Whether Two Strings Are Anagrams
+print("\n--- Q117 ---")
+first, second = "listen", "silent"
+print(sorted(first) == sorted(second))
+
+# Q118. Print Character Frequency Without a Dictionary
+print("\n--- Q118 ---")
+s = "banana"
+seen = ""
+for ch in s:
+    if ch not in seen:
+        print(f"{ch}: {s.count(ch)}")
+        seen += ch
+
+# Q119. Find Repeated Adjacent Characters
+print("\n--- Q119 ---")
+s = "aaabbccccdaa"
+i = 0
+while i < len(s):
+    count = 1
+    while i + 1 < len(s) and s[i] == s[i + 1]:
+        count += 1
+        i += 1
+    print(f"{s[i]}: {count}")
+    i += 1
+
+# Q120. Compare Two Words Position by Position
+print("\n--- Q120 ---")
+first, second = "house", "mouse"
+print(sum(1 for i in range(len(first)) if first[i] != second[i]))
+
+
+# ==========================================
+# Level 5 — Challenge Problems
+# ==========================================
+
+# Q121. Print All Pythagorean Triples up to N
+print("\n--- Q121 ---")
+N = 10
+for c in range(1, N + 1):
+    for b in range(1, c):
+        for a in range(1, b):
+            if a**2 + b**2 == c**2:
+                print(f"{a} {b} {c}")
+
+# Q122. Find Numbers Equal to the Sum of Their Proper Divisors
+print("\n--- Q122 ---")
+N = 30
+for num in range(2, N + 1):
+    if sum(i for i in range(1, num) if num % i == 0) == num:
+        print(num)
+
+# Q123. Print Unique Products in Increasing Factor Order
+print("\n--- Q123 ---")
+N = 3
+products = []
+for i in range(1, N + 1):
+    for j in range(i, N + 1):
+        prod = i * j
+        if prod not in products:
+            products.append(prod)
+products.sort()
+print(" ".join(map(str, products)))
+
+# Q124. Find All Pairs of Prime Numbers with a Given Sum
+print("\n--- Q124 ---")
+N = 10
+
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
+for a in range(2, N // 2 + 1):
+    b = N - a
+    if is_prime(a) and is_prime(b):
+        print(f"{a} {b}")
+
+# Q125. Check a Magic-Sum Pattern
+print("\n--- Q125 ---")
+N = 3
+row_sums = []
+for i in range(1, N + 1):
+    row = [i + j for j in range(1, N + 1)]
+    print(" ".join(map(str, row)))
+    row_sums.append(sum(row))
+print("Row sums:", " ".join(map(str, row_sums)))
+
+# Q126. Count Peaks in a Number Sequence
+print("\n--- Q126 ---")
+N = 7
+numbers = [1, 5, 2, 8, 3, 4, 1]
+peaks = 0
+for i in range(1, N - 1):
+    if numbers[i] > numbers[i - 1] and numbers[i] > numbers[i + 1]:
+        peaks += 1
+print(peaks)
+
+# Q127. Find Repeated Digit Sums
+print("\n--- Q127 ---")
+number = 1234
+s = str(number)
+sums = []
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        sums.append(int(s[i]) + int(s[j]))
+if any(sums.count(x) > 1 for x in sums):
+    print("Repeated pair sums exist")
+
+# Q128. Number Pattern from Row and Column
+print("\n--- Q128 ---")
+N = 4
+for i in range(1, N + 1):
+    row = [str(abs(i - j)) for j in range(1, N + 1)]
+    print(" ".join(row))
+
+# Q129. Compare Digits with Their Neighbours
+print("\n--- Q129 ---")
+number = 1526374
+s = str(number)
+count = 0
+for i in range(1, len(s) - 1):
+    if s[i] > s[i - 1] and s[i] > s[i + 1]:
+        count += 1
+print(count)
+
+# Q130. Count Increasing Digit Pairs
+print("\n--- Q130 ---")
+number = 132
+s = str(number)
+count = 0
+for i in range(len(s)):
+    for j in range(i + 1, len(s)):
+        if s[i] < s[j]:
+            count += 1
+print(count)
+
+# Q131. Character Frequency Compression Without a Dictionary
+print("\n--- Q131 ---")
+s = "BANANA"
+seen = ""
+res = ""
+for ch in s:
+    if ch not in seen:
+        res += f"{ch}{s.count(ch)}"
+        seen += ch
+print(res)
